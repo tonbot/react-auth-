@@ -30,6 +30,10 @@ code {
   height: 40px;
  margin-right: 30px;
 }
+.social-link div:hover{
+  background-color: var(--blue1);
+  color: white;
+}
 .login--row {
   height: 100vh;
 }
@@ -46,10 +50,10 @@ code {
 .login--col2 {
   background-color: var(--blue1);
 }
-/* .login--col2 h2 {
-  animation: login-col2-background 20s infinite linear;
-} */
-@keyframes login-col2-background {
+.ekirs--image {
+  animation: rotate 20s infinite linear;
+} 
+@keyframes rotate {
   from {
     transform: rotate(0deg);
   }

@@ -1,6 +1,11 @@
+
+
 import React from "react";
-export default function Button(param) {
+export default function Button({ name, className }) {
+  const combinedClassName = `btn shadow rounded-pill px-5 py-2 ${className}`;
   return (
-    <button className="btn btn-primary rounded-pill px-5 py-2">{param.name}</button>
+    <button type="button" className={combinedClassName}>
+      {name}
+    </button>
   );
 }
