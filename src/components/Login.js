@@ -1,0 +1,56 @@
+import React from "react";
+import Button from "./Button";
+export default function Login() {
+  return (
+    <section>
+      <div className="container">
+        <div className="row login--row py-5">
+          <div className="login--col1 col-sm-12 col-md-6 col-lg-7 d-flex flex-column justify-content-center align-items-center">
+            <div>
+              <img src="../images/ekirs.webp" />
+            </div>
+            <h1>Login to Your Account</h1>
+            <p>Login using social networks</p>
+            <div className="social-link d-flex flex-row mb-3">
+               <div className="border rounded-circle d-flex justify-content-center align-items-center"><i class="fa fa-facebook"></i></div>
+               <div className="border rounded-circle d-flex justify-content-center align-items-center"><i class="fa fa-instagram"></i></div>
+               <div className="border rounded-circle d-flex justify-content-center align-items-center"><i class="fa fa-linkedin"></i></div>
+            </div>
+            <div className="w-75 mb-3">
+              <form>
+                <div className="mb-3">
+                  <input
+                    type="email"
+                    class="form-control rounded-pill py-3"
+                    id="email"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter email"
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="password"
+                    class="form-control rounded-pill py-3"
+                    id="password"
+                    aria-describedby="password"
+                    placeholder="Enter Password"
+                  />
+                </div>
+                <div className="mb-3 text-center">
+                  <Button name="Login" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div className="login--col2 d-none d-md-flex flex-column pt-4 text-center col-md-6 col-lg-5 justify-content-center align-items-center ">
+            <h2 className="text-white">New Here?</h2>
+            <p className="text-white">Sign up and discover a great amount of new opportunities</p>
+            <div className="mb-3 text-center w-100">
+                 <Button name="Sign Up" />
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
