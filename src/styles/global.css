@@ -37,6 +37,9 @@ code {
 .login--row {
   height: 100vh;
 }
+.login--col1 {
+background-color: #e7e7e7;
+}
 .login--col1 h1 {
   font-weight: 600;
   font-size: 20px;

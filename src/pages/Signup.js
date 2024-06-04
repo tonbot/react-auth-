@@ -1,10 +1,16 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import Button from "../components/Button";
 import SocialLink from "../components/SocialLink";
 import ekirsImage from '../images/ekirs.webp';
 import Input from "../components/Input";
 
 export default function SignUp() {
+    const navigate = useNavigate();
+    const handleNavigateToLogin = () => {
+       navigate('/');
+    };
+  
   return (
     <section>
       <div className="container">
@@ -13,8 +19,8 @@ export default function SignUp() {
             <div>
               <img src={ekirsImage} className="ekirs--image"/>
             </div>
-            <h1>Login to Your Account</h1>
-            <p>Login using social networks</p>
+            <h1>Register An Account</h1>
+            <p>Provide your information to register an account here</p>
             <div className="social-link d-flex flex-row mb-3">
                <SocialLink icon="fa fa-facebook" />
                <SocialLink icon="fa fa-instagram" />
@@ -47,10 +53,10 @@ export default function SignUp() {
             </div>
           </div>
           <div className="login--col2 d-none d-md-flex flex-column pt-4 text-center col-md-6 col-lg-5 justify-content-center align-items-center ">
-            <h2 className="text-white">New Here?</h2>
-            <p className="text-white">Sign up and discover a great amount of new opportunities</p>
+            <h2 className="text-white">Already Have an Account?</h2>
+            <p className="text-white">Login Here and Continue enjoying our Services</p>
             <div className="mb-3 text-center w-100">
-             <Button name="SignUp" className="bg-white text-dark" />
+             <Button name="Login" className="bg-white text-dark" onClick={handleNavigateToLogin}/>
              </div>
           </div>
         </div>

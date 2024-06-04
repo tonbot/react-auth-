@@ -8,6 +8,11 @@ import Input from "../components/Input";
 
 
 export default function Login() {
+  const navigate = useNavigate();
+  const handleNavigateToSignUp = () => {
+     navigate('/signup');
+  };
+
   return (
     <section>
       <div className="container">
@@ -53,7 +58,7 @@ export default function Login() {
             <h2 className="text-white">New Here?</h2>
             <p className="text-white">Sign up and discover a great amount of new opportunities</p>
             <div className="mb-3 text-center w-100">
-             <Button name="SignUp" className="bg-white text-dark"  />
+             <Button name="SignUp" className="bg-white text-dark" onClick={handleNavigateToSignUp} />
              </div>
           </div>
         </div>
