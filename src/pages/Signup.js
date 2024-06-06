@@ -1,9 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
 import Button from "../components/Button";
 import SocialLink from "../components/SocialLink";
 import ekirsImage from '../images/ekirs.webp';
-import Input from "../components/Input";
+
 
 export default function SignUp() {
     const navigate = useNavigate();
@@ -11,6 +11,23 @@ export default function SignUp() {
        navigate('/');
     };
   
+    const [formData, setFormData] = useState({
+        email: '',
+        password: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+    const handleClick = (e) => {
+        console.log('Form Data Submitted:', formData);
+    };
+    
   return (
     <section>
       <div className="container">
@@ -29,25 +46,31 @@ export default function SignUp() {
             <div className="w-75 mb-3">
               <form>
                 <div className="mb-3"> 
-                  <Input
+                  <input
                     type="email"
                     class="form-control rounded-pill py-3"
                     id="email"
-                    arial="emailHelp"
+                    name="email"
+                    aria-describedby="emailHelp"
                     placeholder="Enter email"
+                    value={formData.email}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="mb-3">
-                  <Input
+                  <input
                     type="password"
                     class="form-control rounded-pill py-3"
                     id="password"
-                    arial="password"
+                    aria-describedby="password"
                     placeholder="Enter Password"
+                    name="password"
+                    value={formData.password}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="mb-3 text-center">
-                  <Button name="Login" className="bg-primary text-white" />
+                  <Button id='login' name="Login" className="px-5 py-2 bg-primary text-white" onClick={handleClick} />
                 </div>
               </form>
             </div>

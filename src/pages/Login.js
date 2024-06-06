@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from "../components/Button";
 import SocialLink from "../components/SocialLink";
 import ekirsImage from '../images/ekirs.webp';
-import Input from "../components/Input";
+
 
 
 
@@ -31,20 +31,20 @@ export default function Login() {
             <div className="w-75 mb-3">
               <form>
                 <div className="mb-3"> 
-                  <Input
+                  <input
                     type="email"
                     class="form-control rounded-pill py-3"
                     id="email"
-                    arial="emailHelp"
+                    aria-describedby="emailHelp"
                     placeholder="Enter email"
                   />
                 </div>
                 <div className="mb-3">
-                  <Input
+                  <input
                     type="password"
                     class="form-control rounded-pill py-3"
                     id="password"
-                    arial="password"
+                    aria-describedby="password"
                     placeholder="Enter Password"
                   />
                 </div>
